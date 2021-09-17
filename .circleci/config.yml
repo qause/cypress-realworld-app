@@ -156,7 +156,7 @@ windows-workflow: &windows-workflow
           # executor comes from the "windows" orb
           name: windows/default
           shell: bash.exe
-          size: large
+          size: medium
         pre-steps:
           - run:
               name: Disabling Windows Defender
