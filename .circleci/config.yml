@@ -56,7 +56,7 @@ linux-workflow: &linux-workflow
         start: yarn start:ci
         record: true
         parallel: true
-        parallelism: 5
+        parallelism: 4
         ci-build-id: ${CIRCLE_SHA1:0:8}
         group: API
         requires:
@@ -76,7 +76,7 @@ linux-workflow: &linux-workflow
         start: yarn start:ci
         record: true
         parallel: true
-        parallelism: 5
+        parallelism: 4
         ci-build-id: ${CIRCLE_SHA1:0:8}
         group: "UI - Chrome"
         requires:
@@ -96,7 +96,7 @@ linux-workflow: &linux-workflow
         start: yarn start:ci
         record: true
         parallel: true
-        parallelism: 5
+        parallelism: 4
         ci-build-id: ${CIRCLE_SHA1:0:8}
         group: "UI - Chrome - Mobile"
         requires:
@@ -115,7 +115,7 @@ linux-workflow: &linux-workflow
         start: yarn start:ci
         record: true
         parallel: true
-        parallelism: 5
+        parallelism: 4
         ci-build-id: ${CIRCLE_SHA1:0:8}
         group: "UI - Firefox"
         requires:
@@ -135,7 +135,7 @@ linux-workflow: &linux-workflow
         start: yarn start:ci
         record: true
         parallel: true
-        parallelism: 5
+        parallelism: 4
         ci-build-id: ${CIRCLE_SHA1:0:8}
         group: "UI - Firefox - Mobile"
         requires:
@@ -190,7 +190,7 @@ windows-workflow: &windows-workflow
         start: yarn start:ci
         record: true
         parallel: true
-        parallelism: 5
+        parallelism: 4
         ci-build-id: ${CIRCLE_SHA1:0:8}
         group: "UI - Electron - Windows"
         requires:
@@ -198,7 +198,7 @@ windows-workflow: &windows-workflow
         post-steps:
           - report-coverage
         no-workspace: true
-        timeout: 30m
+        timeout: 90m
 
 workflows:
   linux:
