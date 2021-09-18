@@ -198,7 +198,7 @@ windows-workflow: &windows-workflow
         post-steps:
           - report-coverage
         no-workspace: true
-        timeout: 180m
+        timeout: 90m
 
 workflows:
   linux:
