@@ -8,7 +8,7 @@ executors:
   with-chrome-and-firefox:
     docker:
       - image: "cypress/browsers:node14.15.0-chrome86-ff82"
-    resource_class: medium+
+    resource_class: medium
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Commands ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
 commands:
@@ -198,7 +198,7 @@ windows-workflow: &windows-workflow
         post-steps:
           - report-coverage
         no-workspace: true
-        timeout: 90m
+        timeout: 180m
 
 workflows:
   linux:
